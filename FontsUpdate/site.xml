@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Fonts Size">
+      Fonts Size Update Site
+   </description>
+   <feature url="features/FontsFeature_1.0.0.jar" id="FontsFeature" version="1.0.0"/>
+</site>
