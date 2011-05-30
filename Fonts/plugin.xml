@@ -17,5 +17,29 @@
                id="fonts.actions.FontsDecreaseSizeAction"/>
       </actionSet>
    </extension>
+   <extension point="org.eclipse.ui.commands">
+      <category name="Fonts Size" id="fonts.commands.category"/>
+      <command name="Fonts Increase" ategoryId="fonts.commands.category" id="fonts.commands.increase"/>
+      <command name="Fonts Decrease" ategoryId="fonts.commands.category" id="fonts.commands.decrease"/>
+   </extension>
+    <extension point="org.eclipse.ui.handlers">
+      <handler commandId="fonts.commands.increase" class="fonts.handlers.FontsIncreaseSizeHandler"/>
+      <handler commandId="fonts.commands.decrease" class="fonts.handlers.FontsDecreaseSizeHandler"/>
+   </extension>
+   <extension point="org.eclipse.ui.bindings">
+      <key 
+            commandId="fonts.commands.increase"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="CTRL+="
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key 
+            commandId="fonts.commands.decrease"
+            contextId="org.eclipse.ui.textEditorScope"
+            sequence="CTRL+-"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   
 
 </plugin>
