@@ -30,7 +30,7 @@ public class FontsIncreaseSizeAction implements IWorkbenchWindowActionDelegate {
 	public void run(IAction action) { 
 		String font = store.getString(JFaceResources.TEXT_FONT);
 		String[] split = font.split("\\|");
-		float fontSize = Float.parseFloat(split[2]) + 5;
+		float fontSize = Float.parseFloat(split[2]) + 1;
 
 		split[2] = Float.toString(fontSize);
 		StringBuilder builder = new StringBuilder(split[0]);

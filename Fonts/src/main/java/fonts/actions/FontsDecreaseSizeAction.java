@@ -29,7 +29,7 @@ public class FontsDecreaseSizeAction implements IWorkbenchWindowActionDelegate {
 	public void run(IAction action) { 
 		String font = store.getString(JFaceResources.TEXT_FONT);
 		String[] split = font.split("\\|");
-		float fontSize = Float.parseFloat(split[2]) - 5;
+		float fontSize = Float.parseFloat(split[2]) - 1;
 		if(fontSize<=0)
 			fontSize = 1;
 
