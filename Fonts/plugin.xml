@@ -4,13 +4,13 @@
    <extension point="org.eclipse.ui.actionSets">
       <actionSet label="Fonts Size" visible="true" id="Fonts.actionSet">
          <action
-               label="&amp;Sample Action"
+               label="&amp;Increase fonts size"
                icon="icons/increase-font.gif"
                class="fonts.actions.FontsIncreaseSizeAction"
                toolbarPath="increaseFontsSize"
                id="fonts.actions.FontsIncreaseSizeAction"/>
                 <action
-               label="&amp;Sample Action"
+               label="&amp;Decrease fonts size"
                icon="icons/decrease-font.gif"
                class="fonts.actions.FontsDecreaseSizeAction"
                toolbarPath="increaseFontsSize"
