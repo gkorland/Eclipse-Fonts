@@ -2,7 +2,7 @@
 <feature
       id="FontsFeature"
       label="FontsFeature"
-      version="1.0.3">
+      version="1.0.4">
 
    <description url="http://www.example.com/description">
       Easily control editor Fonts size
@@ -24,7 +24,7 @@
          id="Fonts"
          download-size="0"
          install-size="0"
-         version="1.0.3"
+         version="1.0.4"
          unpack="false"/>
 
 </feature>

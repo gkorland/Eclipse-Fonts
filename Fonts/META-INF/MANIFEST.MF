@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Fonts
 Bundle-SymbolicName: Fonts; singleton:=true
-Bundle-Version: 1.0.3
+Bundle-Version: 1.0.4
 Bundle-Activator: fonts.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
