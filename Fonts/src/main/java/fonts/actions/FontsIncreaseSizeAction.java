@@ -13,21 +13,19 @@
 */
 package fonts.actions;
 
-import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.jface.action.IAction;
-import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
-import org.eclipse.ui.preferences.ScopedPreferenceStore;
+
+import fonts.FontsControler;
 
 /**
  * @author Guy Korland
  */
 public class FontsIncreaseSizeAction implements IWorkbenchWindowActionDelegate {
 	private IWorkbenchWindow window;
-	private IPreferenceStore store;
+	final private FontsControler controler = FontsControler.getFontsControler();
 	/**
 	 * The constructor.	
 	 */
@@ -41,16 +39,7 @@ public class FontsIncreaseSizeAction implements IWorkbenchWindowActionDelegate {
 	 * @see IWorkbenchWindowActionDelegate#run
 	 */
 	public void run(IAction action) { 
-		String font = store.getString(JFaceResources.TEXT_FONT);
-		String[] split = font.split("\\|");
-		float fontSize = Float.parseFloat(split[2]) + 1;
-
-		split[2] = Float.toString(fontSize);
-		StringBuilder builder = new StringBuilder(split[0]);
-		for(int i=1; i<split.length ; ++i){
-			builder.append('|').append(split[i]);
-		}
-		store.setValue(JFaceResources.TEXT_FONT, builder.toString());
+		controler.increase();
 	}
 
 	/**
@@ -78,6 +67,5 @@ public class FontsIncreaseSizeAction implements IWorkbenchWindowActionDelegate {
 	 */
 	public void init(IWorkbenchWindow window) {
 		this.window = window;
-		this.store = new ScopedPreferenceStore( new InstanceScope(), "org.eclipse.ui.workbench" );
 	}
 }
