@@ -7,3 +7,5 @@ Shortcuts -
 CTRL+= : Increase fonts
 
 CTRL+- : Decrease fonts 
+
+
